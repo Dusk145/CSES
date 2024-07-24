@@ -15,20 +15,10 @@ int main(){
     while (t--){
         ll a, b;
         cin >> a >> b;
-        if (a < b){
-            swap(a, b);
-        }
-        b -= (a / 2);
-        if (b < 0){
-            cout << "NO\n";
-        } else if (b == 0 && a % 2 == 0){
+        if ((2 * a - b) % 3 == 0 && (2 * b - a) % 3 == 0 && 2 * a >= b && 2 * b >= a){
             cout << "YES\n";
         } else {
-            if (b == 2){
-                cout << "YES\n"; 
-            } else {
-                cout << "NO\n";
-            }
+            cout << "NO\n";
         }
     }
     return 0;
